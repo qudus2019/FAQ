@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/*### Primary
+
+#### Text*/
+:root{
+--vddblue:hsl(238, 29%, 16%);
+--sred: hsl(14, 88%, 65%);
+
+/*#### Gradient
+
+Background gradient:*/
+
+--sviolet: hsl(273, 75%, 66%);
+--sblue: hsl(240, 73%, 65%);
+
+/*### Neutral
+
+#### Text*/
+
+--vdgbblue: hsl(237, 12%, 33%);
+--dgblue: hsl(240, 6%, 50%);
+
+/*#### Dividers*/
+
+--lgblue: hsl(240, 5%, 91%);
+
+font-size: 12px;
+
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Kumbh Sans';
+    background-image: linear-gradient(to right ,var(--sblue),var(--sviolet));
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card-container{
+    width:600px;
+    max-width:85vw;
+    height:fit-content;
+    background: url('images/bg-pattern-mobile.svg') no-repeat scroll top;
+    position:relative;
+    background-color: white;
+    padding:20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    position: relative;
+    margin-top: 200px;
+}
+
+img.mobile{
+    position: absolute;
+    top:-110px;
+    left: 13%;
+    display: flex;
+    justify-content: center;
+    width:75%;
+   
+}
+
+img.desktop{
+    display: none;
+}
+
+h1.title{
+    text-transform: uppercase;
+    padding:10px 0;
+    text-align: center;;
+}
+
+div.text{
+    padding-top:100px ;
+}
+
+ul li{
+    padding: 15px 0;
+    border-bottom: 1px solid var(--lgblue);
+}
+
+ul li div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li div{
+    font-weight: 200;
+    cursor: pointer;
+}
+
+ul li.open div{
+    padding-bottom: 10px;
+
+}
+ul li div h3{
+    font-weight: 200;
+    width:92%;
+    font-size: 1.15em;
+    color:var(--vdgbblue)
+}
+
+ul li div h3:hover{
+    color:var(--sred);
+}
+
+ul li.open div h3{
+    font-weight: 800;
+    color:var(--vddblue)
+    
+}
+
+ul li.open div img.arrow{
+    transform: rotateX(170deg);
+    transition: all .4s;
+}
+ul li div img.arrow{
+    
+    transition: all .4s;
+}
+
+ul li p{
+    font-size: 1em;
+    width:90%;
+    height:0;
+    opacity:0;
+    color:var(--dgblue)
+  
+    
+}
+
+ul li.open p{
+    height:fit-content;
+    opacity:1;
+}
+
+@media screen and (min-width:700px){
+    
+
+    div.card-container{
+        width:890px;
+        height:fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding:70px 85px;
+        margin-top: 8%;
+        background-image: url('images/bg-pattern-desktop.svg');
+        background-position: left;
+        background-size: 50%;
+    }
+
+    h1.title{
+        text-align: left;
+    }
+
+    img.mobile{
+        display:none;
+    }
+
+    img.desktop{
+        display:block;
+        width: 120%;
+        position: relative;
+        left:-150px;
+        
+    }
+
+    img.box{
+        position: absolute;
+        width:200px;
+        top:100px;
+        left:-180px;
+    }
+
+    div.text{
+        margin-top: 0;
+        padding: 0;
+        width:90%;
+
+    }
+
+    div.images{
+        width:100%;
+        position: relative;
+    }
+}

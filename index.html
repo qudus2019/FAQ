@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 15px; text-align: center;background-color: white;width:fit-content;padding: 20px; border-radius: 15px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card-container">
+      
+        <div class="images">
+          <img src="images/illustration-woman-online-desktop.svg" alt="" class="desktop">
+          <img src="images/illustration-woman-online-mobile.svg" alt="" class="mobile">
+          <img src="images/illustration-box-desktop.svg" alt="" class="desktop box">
+        </div>
+
+      <div class="text">
+        <h1 class="title">faq</h1>
+        <ul class="menu">
+          <li>
+            <div class=""> 
+              <h3 class="title">How many team members can I invite?</h3>
+            <img src="images/icon-arrow-down.svg" alt="" class="arrow"></div>
+              <p class="details"> You can invite up to 2 additional users on the Free plan. There is no limit on  team members for the Premium plan.</p>
+          </li>
+          <li>
+            <div class=""> 
+              <h3 class="title">What is the maximum file upload size?</h3>
+            <img src="images/icon-arrow-down.svg" alt="" class="arrow">
+          </div>
+              <p class="details">    No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </li>
+
+          <li>
+            <div class=""> 
+              <h3 class="title">How do I reset my password?</h3>
+            <img src="images/icon-arrow-down.svg" alt="" class="arrow">
+          </div>
+              <p class="details">  Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+          </li>
+          <li>
+            <div class=""> 
+              <h3 class="title">Can I cancel my subscription?</h3>
+            <img src="images/icon-arrow-down.svg" alt="" class="arrow"></div>
+              <p class="details">Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </li>
+          <li>
+            <div class=""> 
+              <h3 class="title">Do you provide additional support?</h3>
+            <img src="images/icon-arrow-down.svg" alt="" class="arrow"></div>
+              <p class="details"> Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </main>
+ 
+  <center><div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdulqudus Sanusi</a>.
+  </div></center>
+
+  <script>
+    let arrows = document.querySelectorAll('.arrow');
+    arrows.forEach((arrow)=>{
+      arrow.addEventListener('click',function(e){
+        open(arrow);
+      })
+    })
+
+    function open(arr){
+      arr.parentElement.parentElement.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
